@@ -5,7 +5,7 @@ syntax keyword txKeyword cascade around block override contained
 syntax match txKeyword +contains+ contained
 
 syntax include @inlinePerl syntax/perl.vim
-syntax cluster inlinePerl remove=perlFunctionName
+syntax cluster inlinePerl remove=perlFunctionName remove=perlElseIfError
 syntax region txBlock   matchgroup=txDelim start=+<:+ end=+:>+ contains=txKeyword,txComment,@inlinePerl containedin=ALL keepend
 syntax match  txBlock   +^\s*:.*$+ contains=txDelim,txKeyword,txComment,@inlinePerl
 syntax match  txDelim   +:+ contained
