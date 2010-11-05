@@ -9,7 +9,7 @@ syntax cluster inlinePerl remove=perlFunctionName remove=perlElseIfError
 syntax region txBlock   matchgroup=txDelim start=+<:+ end=+:>+ contains=txKeyword,txComment,@inlinePerl containedin=ALL keepend
 syntax match  txBlock   +^\s*:.*$+ contains=txDelim,txKeyword,txComment,@inlinePerl
 syntax match  txDelim   +:+ contained
-syntax match  txComment +#[^;\r\n]*+ contained
+syntax match  txComment +#[^;]*+ contained
 
 highlight link txKeyword Function
 highlight link txDelim   Special
