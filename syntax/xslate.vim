@@ -1,7 +1,7 @@
 runtime! syntax/html.vim
 unlet b:current_syntax
 
-syntax keyword txKeyword cascade around block override contained
+syntax keyword txKeyword cascade around block override macro contained
 syntax match txKeyword +contains+ contained
 
 syntax include @inlinePerl syntax/perl.vim
